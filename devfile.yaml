@@ -1,8 +1,13 @@
 schemaVersion: 2.1.0
 metadata:
   name: public-repo-check
-projects:
-  - name: public-repo-check
-    git:
-      remotes:
-        origin: https://github.com/crw-qe/public-repo-check.git
+
+commands:
+  - id: file-list
+    exec:
+      label: "File list"
+      component: tools
+      workingDir: ${PROJECTS_ROOT}
+      commandLine: "ls -la"
+      group:
+        kind: build
