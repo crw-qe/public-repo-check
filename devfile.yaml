@@ -1,7 +1,11 @@
 schemaVersion: 2.1.0
 metadata:
   name: public-repo-check
-
+projects:
+  - name: python-hello-check
+    git:
+      remotes:
+        origin: 'https://github.com/crw-qe/public-repo-check.git'
 commands:
   - id: file-list
     exec:
